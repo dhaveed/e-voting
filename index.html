@@ -4,9 +4,11 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <link href="./assets/css/css1.css" rel="stylesheet" type="text/css">
+ 
     <link rel="stylesheet" href="./assets/css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="./assets/plugins/normalize.css" type="text/css">
+    <link rel="stylesheet" href="./assets/plugins/aminate.css" type="text/css">
 
     <title>C.S.A Voting System</title>
 
@@ -19,7 +21,7 @@
         <div id="table-wrapper">
             <div class="container">
                 <div id="row-header">
-                    <header><a href="http://themestarz.net/html/soon/index-vertical-form.html#" id="brand" class="animate animate fade-in animation-time-3s in"><img src="./assets/img/logo.png" alt=""></a></header>
+                    <header><img src="./assets/img/logo.png" alt=""></a></header>
                 </div>
                 <!--end row-header-->
                 <div id="row-content">
@@ -42,7 +44,7 @@
 
                             <div class="col-md-4 col-sm-4 vertical-aligned-element">
                                 <form method="post" class="form clearfix has-background animate translate-z-in animation-time-2s delay-03s in log" id="login-form">
-                                <div id="login-msg" class="alert alert-warning">hi</div>
+                                <div id="login-msg" class="alert alert-warning hidden"></div>
                                     <h4>Login</h4>
                                     <div class="form-group">
                                         <input type="text" id="matnum" class="form-control" name="email" placeholder="Matric Number" >
@@ -65,7 +67,7 @@
 
                                  <!--sign up form-->
                                      <form method="post" class="form clearfix has-background animate translate-z-in animation-time-2s delay-03s in sign" id="reg-form">
-                                     <div id="reg-msg" class="alert alert-warning"></div>
+                                     <div id="reg-msg" class="alert alert-warning hidden"></div>
                                     <h4> Create account</h4>
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="reg-name" placeholder="Your fullname" >
