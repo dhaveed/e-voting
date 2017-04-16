@@ -79,15 +79,16 @@ function sendResetMail($email,$username){
 function sendConfirmMail($email,$activation_link){
     $sender = "Computer Science Association Voting System <no-reply@csc.graybot.com>";
     $subject = "Activation link for CSA voting";
+    $aclink = $activation_link; $to = $email;
     $msg .= "Hi.\n";
     $msg .= "Please use this link to activate your account.\n";
-    $msg .= "<a href=" .$activation_link . "</a>.\n\n";
+    $msg .= "<a href=".$aclink."</a>.\n\n";
     $msg .= "Thanks.\n";
 
     $headers = 'From: '.$sender.'' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-    $doSend = mail($email, $subject, $msg, $headers);
+    $doSend = mail($to, $subject, $msg, $headers);
 
     if($doSend){
         return true;
