@@ -15,6 +15,8 @@ $(document).ready(function(){
 		evt.preventDefault();
 	});
 
+	
+
 	$('#login-btn').on('click', function(){
 		var formData = {
 			matricnumber: $('#matnum').val(),
@@ -34,6 +36,7 @@ $(document).ready(function(){
 			data: JSON.stringify(formData),
 			success: function(res){
 				var msg = JSON.stringify(res.message);
+				$('.hide').removeClass();
 				$('#login-msg').text(msg);				
 				$('#login-msg').removeClass('alert-warning');
 				$('#login-msg').addClass('alert-success');
@@ -87,6 +90,7 @@ $(document).ready(function(){
 			data: JSON.stringify(regForm),
 			success: function(res){
 				var msg = JSON.stringify(res.message);
+				$('.hidden').removeClass();
 				$('#reg-msg').text(msg);
 				console.log(res);
 			},

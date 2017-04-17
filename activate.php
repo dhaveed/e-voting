@@ -22,7 +22,6 @@
 		$userRow = $conn->query($sql);
 		if($userRow->num_rows > 0){
 			if($result = $userRow->fetch_assoc()){
-				echo $result['activated'];
 				if($result['activated'] == 1){
 					echo "account already activated";
 				} else{
