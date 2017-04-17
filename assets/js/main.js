@@ -21,7 +21,13 @@ $(document).ready(function(){
 			password: $('#pwd').val()
 		}
 
-		$.ajax({
+		/*var doLogin = ajaxHandler.post('login', formData);
+		console.log(doLogin);*/
+
+		console.log(ajaxHandler.get('session'));
+
+
+		/*$.ajax({
 			url: "http://localhost/voting-server/server/apis/login",
 			method: 'POST',
 			dataType:'json',
@@ -39,7 +45,7 @@ $(document).ready(function(){
 				$('#login-msg').removeClass('alert-warning');
 				$('#login-msg').addClass('alert-danger');
 			}
-        });
+        });*/
 
 
 
@@ -82,14 +88,22 @@ $(document).ready(function(){
 			success: function(res){
 				var msg = JSON.stringify(res.message);
 				$('#reg-msg').text(msg);
+				console.log(res);
 			},
-			/*error: function(x,s,e){
+			error: function(x,s,e){
 				var msg = JSON.stringify(e.message);
-			console.log(JSON.stringify(e));
+			console.log(e);
 				$('#reg-msg').text(msg);
 				$('#reg-msg').removeClass('alert-warning');
 				$('#reg-msg').addClass('alert-danger');
-			}*/
+			}
         });
+	});
+
+
+
+	//----------- Ajax haendler -----
+	$('#getCategories').click(function(){
+		ajaxHandler.get('categories');
 	});
 });
